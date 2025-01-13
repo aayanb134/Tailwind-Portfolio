@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--bold impact sans-->
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Portfolio</title>
+</head>
+<body class="overflow-x-hidden font-quicksand dark:bg-purple-950 transition-colors duration-200">
+    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50">
+        <img src="./resources/logo.png" alt="logo" class="w-28 cursor-default mr-14 rounded-full">
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white dark:bg-purple-800 dark:text-white shadow-md bg-opacity-65 transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="flex items-center gap-4">
+            <button id="dark-toggle">
+                <img src="./resources/dark.png" alt="dark-toggle" class="w-6 dark:hidden">
+                <img src="./resources/light.png" alt="dark-mode" class="w-6 hidden dark:block">
+            </button>
+            <a href="#contact" class="hidden lg:flex items-center gap-3 px-10 py-2.5 bg-white dark:bg-purple-800 dark:text-white bg-opacity-50 shadow-md rounded-full ml-4 transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105">
+                Contact
+                <img src="./resources/contact.png" alt="contact" class="w-3 dark:hidden">
+                <img src="./resources/contactDark.png" alt="" class="w-3 hidden dark:block">
+            </a>
+            <button class="block md:hidden ml-3" onclick="openMenu()">
+                <img src="./resources/menu.png" alt="" class="w-6 dark:hidden">
+                <img src="./resources/menuDark.png" alt="" class="w-6 dark:block">
+            </button>
+        </div>
+<!-- Mobile Menu -->
+        <ul id="sideMenu" class="flex md:hidden flex-col gap-4 py-20 px-10 mx-auto fixed -right-64 top-0 bottom-0 w-64 z-50 h-screen bg-rose-50 dark:bg-purple-800/50 dark:text-white transition duration-500">
+            <div class="absolute right-6 top-6" onclick="closeMenu()"><img src="./resources/closeMenu.png" alt="" class="w-5 cursor-pointer"></div>
+            <li><a href="#home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About Me</a></li>
+            <li><a href="#projects" onclick="closeMenu()">Projects</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact</a></li>
+        </ul>
+    </nav>
+
+<!-- home -->
+    <div id="home" class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4">
+    <img src="./resources/profile.png" alt="profile" class="rounded-full w-32 dark:shadow-md"> 
+    <h3 class="flex items-center gap-2 text-2xl md:text-3xl mb-3 dark:text-white">Hi! I'm Aayan</h3>
+    <h1 class="text-3xl small:text-6xl lg:text-[24px] dark:text-white">A junior frontend web developer based in London</h1>
+
+    <div class="flex flex-row items-center justify-center mx-auto">
+        <a class="lg:flex items-center gap-3 px-5 py-2.5 bg-white dark:bg-purple-800 bg-opacity-35 shadow-md rounded-full ml-4 transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105" target="_blank" href="https://www.linkedin.com/in/aayanb134/">
+            <img src="./resources/linkedin.png" alt="" class="dark:hidden">
+            <img src="./resources/linkedinDark.png" alt="" class="hidden dark:block">
+        </a>
+        <a class="lg:flex items-center gap-3 px-5 py-2.5 bg-white dark:bg-purple-800 bg-opacity-35 shadow-md rounded-full ml-4 transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105" target="_blank" href="https://github.com/aayanb134">
+            <img src="./resources/github.png" alt="" class="dark:hidden">
+            <img src="./resources/githubDark.png" alt="" class="hidden dark:block">
+        </a>
+        <a class="lg:flex items-center gap-3 px-5 py-2.5 bg-white dark:bg-purple-800 bg-opacity-35 shadow-md rounded-full ml-4 transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105" target="_blank" href="./resources/resume.pdf">
+            <img src="./resources/download.png" alt="" class="dark:hidden">
+            <img src="./resources/downloadDark.png" alt="" class="hidden dark:block">
+        </a>
+    </div>
+    </div>
+
+<!-- about -->
+    <div id="about" class="w-full px-[12%] py-10">
+        <h4 class="text-center mb-2 text-2xl md:text-3xl dark:text-white">About Me</h4>
+        <div class="flex w-full flex-col lg:flex-row items-center gap-20 my-20">
+            <div class="max-w-max mx-auto relative"><img src="./resources/profile2.png" alt="" class="w-64 sm:w-80 rounded-3xl max-w-none shadow-none"></div>
+            <div class="flex-1">
+                <p class="mb-10 max-w-2xl dark:text-white">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora modi deleniti fuga deserunt quae similique. Labore, ducimus animi cum, commodi ullam et cumque ipsam facere soluta ab, necessitatibus eos veniam?</p>
+                <ul class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl">
+                    <li class="rounded-xl p-6 cursor-pointer  bg-white dark:bg-purple-800 shadow-md transition-all duration-500 ease-in-out hover:shadow-lg hover:scale-105">
+                        <img src="./resources/code.png" alt="" class="w-7 mt-3 dark:hidden">
+                        <img src="./resources/codeDark.png" alt="" class="w-7 mt-3 hidden dark:block">
+                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Languages</h3>
+                        <p class="text-gray-600 text-sm dark:text-white">HTML, CSS, TaiwindCSS, JavaScript, TypeScript</p>
+                    </li>
+                    <li class="rounded-xl p-6 cursor-pointer  bg-white dark:bg-purple-800 shadow-md transition-all duration-500 ease-in-out hover:shadow-lg hover:scale-105">
+                        <img src="./resources/education.png" alt="" class="w-7 mt-3 dark:hidden">
+                        <img src="./resources/educationDark.png" alt="" class="w-7 mt-3 hidden dark:block">
+                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Education</h3>
+                        <p class="text-gray-600 text-sm dark:text-white">Brampton Manor Academy</p>
+                    </li>
+                    <li class="rounded-xl p-6 cursor-pointer  bg-white dark:bg-purple-800 shadow-md transition-all duration-500 ease-in-out hover:shadow-lg hover:scale-105">
+                        <img src="./resources/projects.png" alt="" class="w-7 mt-3 dark:hidden">
+                        <img src="./resources/projectsDark.png" alt="" class="w-7 mt-3 hidden dark:block">
+                        <a href="#projects"></a>
+                        <h3 class="my-4 font-semibold text-gray-700 dark:text-white">Projects</h3>
+                        <p class="text-gray-600 text-sm dark:text-white">Just some projects I did in my spare time</p>
+                    </li>
+                </ul>
+                <h4 class="my-6 text-gray-700 dark:text-white">Tools I Use</h4>
+                <ul class="flex items-center gap-3 sm:gap-5">
+                    <li class="flex items-center bg-transparent justify-center w-12 sm:w-14 aspect-square rounded-lg shadow-md transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105">
+                        <img src="./resources/vscode.png" alt="">
+                    </li>
+                    <li class="flex items-center bg-transparent justify-center w-12 sm:w-14 aspect-square rounded-lg shadow-md transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105">
+                        <img src="./resources/jetbrains.png" alt="">
+                    </li>
+                    <li class="flex items-center bg-transparent justify-center w-12 sm:w-14 aspect-square rounded-lg shadow-md transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105">
+                        <img src="./resources/githubTool.png" alt="">
+                    </li>
+                    <li class="flex items-center bg-transparent justify-center w-12 sm:w-14 aspect-square rounded-lg shadow-md transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105">
+                        <img src="./resources/aws.png" alt="" class="dark:hidden">
+                        <img src="./resources/awsDark.png" alt="" class="hidden dark:block">
+                    </li>
+                    <li class="flex items-center bg-transparent justify-center w-12 sm:w-14 aspect-square rounded-lg shadow-md transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105">
+                        <img src="./resources/terraform.png" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- projects -->
+    <div id="projects" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h4 class="text-center mb-2 text-2xl md:text-3xl dark:text-white">Projects</h4>
+        <div class="grid grid-cols-auto md:grid-cols-3 my-10 gap-5">
+            <a target="_blank" href="" class="text-center text-xl cursor-default dark:text-white">Project 1
+                <div 
+                    class="aspect-square bg-[url('./resources/1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group shadow-md transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105">    
+                </div>
+            </a>
+            <a target="_blank" href="" class="text-center text-xl cursor-default dark:text-white">Project 2
+                <div 
+                    class="aspect-square bg-[url('./resources/2.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group shadow-md transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105">    
+                </div>
+            </a>
+            <a target="_blank" href="" class="text-center text-xl cursor-default dark:text-white">Project 3
+                <div 
+                    class="aspect-square bg-[url('./resources/3.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group shadow-md transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105">    
+                </div>
+            </a>
+        </div>
+        <a target="_blank" href="https://github.com/aayanb134" class="w-max md:w-1/3 flex items-center justify-center gap-2 py-3 px-10 mx-auto my-20 bg-white dark:bg-purple-800 dark:text-white bg-opacity-50 shadow-md rounded-full transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105">Show more 
+            <img src="./resources/contact.png" alt="more" class="w-4 dark:hidden">
+            <img src="./resources/contactDark.png" alt="" class="w-4 dark:block">
+        </a>
+    </div>
+
+    <!-- contact -->
+    <div id="contact" class="w-full px-[12%] py-10 scroll-mt-20">
+        <h4 class="text-center mb-2 text-2xl md:text-3xl dark:text-white">Contact Me</h4>
+        <p class="text-center max-w-2xl mx-auto mt-5 mb-12 dark:text-white">I'd love to hear from you! If you have any questions, comments or feedback, please use the form below.</p>
+        <form method="post" action="https://api.web3forms.com/submit" class="max-w-2xl mx-auto">
+            <input type="hidden" name="access_key" value="7f09d77f-2879-475e-ba98-bc2fc3543880">
+            <div class="grid grid-cols-2 gap-6 mt-10 mb-8">
+                <input type="text" placeholder="Name..." class="flex-1 p-3 outline-none border-[0.5px] rounded-full bg-white shadow-inner" required name="name">
+                <input type="text" placeholder="Email Address..." class="flex-1 p-3 outline-none border-[0.5px] rounded-full bg-white shadow-inner" required name="email">
+            </div>
+            <textarea rows="6" placeholder="Enter your message..." class="w-full p-4 outline-none border-[0.5px] rounded-lg bg-white shadow-inner mb-6" required name="message"></textarea>
+            <button class="py-3 px-8 w-max flex items-center justify-between gap-2 rounded-full mx-auto bg-white dark:bg-purple-800 dark:text-white shadow-md transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105">Send 
+                <img src="./resources/send.png" alt="" class="w-4 dark:hidden">
+                <img src="./resources/sendDark.png" alt="" class="w-4 hidden dark:block">
+            </button>
+        </form>
+    </div>
+
+    <!-- footer -->
+    <div class="mt-20">
+        <div class="text-center">
+            <img src="./resources/logo.png" alt="logo" class="w-36 mx-auto -mb-2">
+            <div class="w-max flex items-center gap-2 mx-auto dark:text-white cursor-default">
+                <img src="./resources/mail.png" alt="email" class="w-6 dark:hidden">
+                <img src="./resources/mailDark.png" alt="" class="w-6 dark:block">
+                johndoe@gmail.com
+            </div>
+        </div>
+        <div class="text-center sm:flex items-center justify-between border-t border-gray-400 mx-[10%] mt-12 py-6 dark:text-white cursor-default">
+            <p>© 2025 John Doe. All rights reserved</p>
+            <ul class="flex items-center gap-10 justify-center mt-4 sm:mt-0">
+                <li><a target="_blank" href="https://github.com/aayanb134">GitHub</a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/in/aayanb134/">LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
